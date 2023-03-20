@@ -8,7 +8,7 @@ By: Sahana Narayanan (sanarayanan@ucsd.edu)
 
 **Prediction Problem:** Can we predict the average rating of a recipe based on information about its nutritional values and cooking time?
 
-The type of this prediction problem will be regression, and the response variable is the average ratings of recipes. I chose it as the response variable because I wanted to investigate how the ratings users give to recipes change based on the nutritional values (calories, sugar, etc) and the amount of time taken to prepare the recipe. In Project 3, I specifically explored the relationship between cooking time and the average ratings, and I wanted to expand more on this in Project 5. 
+The type of this prediction problem will be regression, and the response variable is the average ratings of recipes. I chose it as the response variable because I wanted to investigate how the ratings users give to recipes change based on the nutritional values (calories, sugar, etc) and the amount of time taken to prepare the recipe. In Project 3, I specifically explored the relationship between cooking time and the average ratings, and I wanted to expand more on this in Project 5. All of the values used to make predictions would be known at the time of prediction
 
 The metric I will be using to evaluate my model is accuracy, which will indicate the proportion of predictions that are correct. I find that this is a suitable metric to use in regression problems and it will allow a clear comparison between the baseline and final models. 
 
@@ -31,4 +31,6 @@ Here is the `head` of the cleaned dataframe:
 |        40 |            5 |      194.8 |          20 |       6 |       32 |        22 |              36 |               3 |
 
 # Baseline Model
+
+
 
