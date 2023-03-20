@@ -22,13 +22,13 @@ Finally, the remaining columns were dropped since they were not relevant to my s
 
 Here is the `head` of the cleaned dataframe:
 
-|   minutes |   rating |   avg_rating |   calories |   total fat |   sugar |   sodium |   protein |   saturated fat |   carbohydrates |
-|----------:|---------:|-------------:|-----------:|------------:|--------:|---------:|----------:|----------------:|----------------:|
-|        40 |        4 |            4 |      138.4 |          10 |      50 |        3 |         3 |              19 |               6 |
-|        45 |        5 |            5 |      595.1 |          46 |     211 |       22 |        13 |              51 |              26 |
-|        40 |        5 |            5 |      194.8 |          20 |       6 |       32 |        22 |              36 |               3 |
-|        40 |        5 |            5 |      194.8 |          20 |       6 |       32 |        22 |              36 |               3 |
-|        40 |        5 |            5 |      194.8 |          20 |       6 |       32 |        22 |              36 |               3 |
+|   minutes |   avg_rating |   calories |   total fat |   sugar |   sodium |   protein |   saturated fat |   carbohydrates |
+|----------:|-------------:|-----------:|------------:|--------:|---------:|----------:|----------------:|----------------:|
+|        40 |            4 |      138.4 |          10 |      50 |        3 |         3 |              19 |               6 |
+|        45 |            5 |      595.1 |          46 |     211 |       22 |        13 |              51 |              26 |
+|        40 |            5 |      194.8 |          20 |       6 |       32 |        22 |              36 |               3 |
+|        40 |            5 |      194.8 |          20 |       6 |       32 |        22 |              36 |               3 |
+|        40 |            5 |      194.8 |          20 |       6 |       32 |        22 |              36 |               3 |
 
 # Baseline Model
 
