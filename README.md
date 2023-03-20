@@ -4,13 +4,15 @@ By: Sahana Narayanan (sanarayanan@ucsd.edu)
 
 # Framing the Problem
 
-This dataset contains information about recipes and the reviews and ratings submitted for them. The recipes dataset contains basic information about the name of the recipe, the cooking time, nutrition information, steps and a description. The ratings dataset contains information about the specific reviews given.
+**Introduction**: This dataset contains information about recipes and the reviews and ratings submitted for them. The recipes dataset contains basic information about the name of the recipe, the cooking time, nutrition information, steps and a description. The ratings dataset contains information about the specific reviews given.
 
 **Prediction Problem:** Can we predict the average rating of a recipe based on information about its nutritional values and cooking time?
 
 The type of this prediction problem will be regression, and the response variable is the average ratings of recipes. I chose it as the response variable because I wanted to investigate how the ratings users give to recipes change based on the nutritional values (calories, sugar, etc) and the amount of time taken to prepare the recipe. In Project 3, I specifically explored the relationship between cooking time and the average ratings, and I wanted to expand more on this in Project 5. 
 
 The metric I will be using to evaluate my model is accuracy, which will indicate the proportion of predictions that are correct. I find that this is a suitable metric to use in regression problems and it will allow a clear comparison between the baseline and final models. 
+
+**Data Cleaning**
 
 It was necessary to perform certain data cleaning steps before creating the model, which were very similar to the cleaning steps I performed in Project 3 for this dataset - the following steps and explanations were taken from my website for Project 3. First, the recipes and ratings datasets were merged together. Next, the ratings with values of 0 were replaced with `np.nan`. This was a reasonable step as we can predict that instead of giving a recipe a 0 rating, it is more likely that the user did not submit their rating for that recipe and it had just been filled with 0 instead. Then, the average ratings per recipe were calculated. The 'nutrition' column, which previously contained a list of numbers representing each nutritional value, was split up into different parts such that there would be one column for each value. 
 
