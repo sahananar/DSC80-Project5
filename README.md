@@ -34,8 +34,11 @@ Here is the `head` of the cleaned dataframe:
 
 Describe your model and state the features in your model, including how many are quantitative, ordinal, and nominal, and how you performed any necessary encodings. Report the performance of your model and whether or not you believe your current model is “good” and why.
 
-I used all possible features to create my model - that is all of the nutritional values (calories, total fat, sugar, sodium, protein, saturated fat, carbohydrates) and the cooking time in minutes. All of these features were quantitative, therefore no feature engineering or encodings were necessary. The regressor I used in my pipeline was the `DecisionTreeRegressor` in `sklearn` with an initial `max_depth` of 4 - this is a hyperparameter I would be tuning in the following step. 
+I used all the possible features to create my model - all of the nutritional values (calories, total fat, sugar, sodium, protein, saturated fat, carbohydrates) and the cooking time in minutes. All 8 of these these features were quantitative, therefore no feature engineering or encodings were necessary. The regressor I used in my pipeline was the `DecisionTreeRegressor` in `sklearn` with an initial `max_depth` of 4 - this is a hyperparameter I would be tuning in the following step. 
 
-After fitting the pipeline with the relevant `X` and `y` data and producing an array of predicted `avg_rating` values, I calculated a RMSE value of 0.24. Since this value is on the lower side, it indicates that the model generally made reasonable predictions and was good at predicting the rating values given the features that were passed in. 
+After fitting the pipeline with the relevant `X` and `y` data and producing an array of predicted `avg_rating` values, I calculated a RMSE value of 0.24. Since this value is on the lower side, it indicates that the model generally made reasonable predictions and was good at predicting the rating values given the features that were passed in. Therefore, I concluded that this current model is "good". 
 
-I also wanted to evaulate the model's ability to generalize to unseen data - to do this, 
+I also wanted to evaulate the model's ability to generalize to unseen data - to do this, I used the `train_test_split` function and fit the pipeline with the `x_train` and `y_train` data. Then, I used the pipeline to predict values for the `y_train` and `y_test` data and found the RMSE of each. The RMSE of the training data was 0.494 and for the test data it was 0.4975. Therefore, since the RMSE values of both are very similar, I concluded that the model is not overfitting to the data and it would be able to generalize well to unseen data. 
+
+# Final Model
+
