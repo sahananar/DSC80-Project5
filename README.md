@@ -10,7 +10,7 @@ By: Sahana Narayanan (sanarayanan@ucsd.edu)
 
 The type of this prediction problem will be regression, and the response variable is the average ratings of recipes. I chose it as the response variable because I wanted to investigate how the ratings users give to recipes change based on the nutritional values (calories, sugar, etc) and the amount of time taken to prepare the recipe. In Project 3, I specifically explored the relationship between cooking time and the average ratings, and I wanted to expand more on this in Project 5. All of the values used to make predictions would be known at the time of prediction
 
-The metric I will be using to evaluate my model is accuracy, which will indicate the proportion of predictions that are correct. I find that this is a suitable metric to use in regression problems and it will allow a clear comparison between the baseline and final models. 
+The metric I will be using to evaluate my model is root mean squared error, using the `mean_squared_error` function from `sklearn`. I think this metric will be useful as it will indicate how much error there was in the predictions and will give a good idea of how reasonable the predictions were. Additionally, I will be able to use this metric to evaulate the best hyperparameters as well as evaluating how well the model generalizes to unseen data. 
 
 **Data Cleaning**
 
@@ -34,6 +34,8 @@ Here is the `head` of the cleaned dataframe:
 
 Describe your model and state the features in your model, including how many are quantitative, ordinal, and nominal, and how you performed any necessary encodings. Report the performance of your model and whether or not you believe your current model is “good” and why.
 
-Tip: Make sure to hit all of the points above: many projects in the past have lost points for not doing so.
+I used all possible features to create my model - that is all of the nutritional values (calories, total fat, sugar, sodium, protein, saturated fat, carbohydrates) and the cooking time in minutes. All of these features were quantitative, therefore no feature engineering or encodings were necessary. The regressor I used in my pipeline was the `DecisionTreeRegressor` in `sklearn` with an initial `max_depth` of 4 - this is a hyperparameter I would be tuning in the following step. 
 
+After fitting the pipeline with the relevant `X` and `y` data and producing an array of predicted `avg_rating` values, I calculated a RMSE value of 0.24. Since this value is on the lower side, it indicates that the model generally made reasonable predictions and was good at predicting the rating values given the features that were passed in. 
 
+I also wanted to evaulate the model's ability to generalize to unseen data - to do this, 
