@@ -42,3 +42,15 @@ I also wanted to evaulate the model's ability to generalize to unseen data - to 
 
 # Final Model
 
+First, I focused on tuning the `max_depth` hyperparameter for the regressor. I used an iterative method, where I initially did a `train_test_split`, then looped through values ranging from 1 to 21 and set the `max_depth` parameter of the `DecisionTreeRegressor` equal to each of these values. I stored the training and testing error for each iteration in a dictionary and at the end looked at which value of the depth resulted in the lowest test error. This value was 20, which I would be using in the pipeline for the final model. 
+
+To engineer the features, I looked at the range for each column - the difference between the maximum and minimum for each column. This range was reasonable for some values but quite high for some others, especially for 'calories'. I decided that it would be better to convert these columns into standard units, so the variables could be better compared among one another. I would engineer the features by applying the `StandardScaler()` function to each of the columns. 
+
+My new pipeline was created using `StandardScaler()` and with the best hyperparameter for `DecisionTreeRegressor`. I fit this pipeline on the same X and y data, predicted new values, and calculated a final RMSE of 0.13. This was a significant improvement from the baseline model and indicates that the improvements did help the model perform better and make even more accurate predictions. 
+
+However, when conducting another `train_test_split` and evaluating the model's ability to generalize to unseen data, I obtained a training error of 0.36 and a test error of 0.47. Since the test error is larger, this could indicate the presence of overfitting and the model may not be able to generalize to unseen data as well. Therefore, while the model improved in quality and made better predictions than the baseline model, it was not able to generalize as well due to the potential presence of overfitting. 
+
+# Fairness Analysis
+
+
+
