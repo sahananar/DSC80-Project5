@@ -22,15 +22,18 @@ Finally, the remaining columns were dropped since they were not relevant to my s
 
 Here is the `head` of the cleaned dataframe:
 
-|   minutes |   avg_rating |   calories |   total fat |   sugar |   sodium |   protein |   saturated fat |   carbohydrates |
-|----------:|-------------:|-----------:|------------:|--------:|---------:|----------:|----------------:|----------------:|
-|        40 |            4 |      138.4 |          10 |      50 |        3 |         3 |              19 |               6 |
-|        45 |            5 |      595.1 |          46 |     211 |       22 |        13 |              51 |              26 |
-|        40 |            5 |      194.8 |          20 |       6 |       32 |        22 |              36 |               3 |
-|        40 |            5 |      194.8 |          20 |       6 |       32 |        22 |              36 |               3 |
-|        40 |            5 |      194.8 |          20 |       6 |       32 |        22 |              36 |               3 |
+|   minutes |   calories |   total fat |   sugar |   sodium |   protein |   saturated fat |   carbohydrates |   avg_rating |
+|----------:|-----------:|------------:|--------:|---------:|----------:|----------------:|----------------:|-------------:|
+|        40 |      138.4 |          10 |      50 |        3 |         3 |              19 |               6 |            4 |
+|        45 |      595.1 |          46 |     211 |       22 |        13 |              51 |              26 |            5 |
+|        40 |      194.8 |          20 |       6 |       32 |        22 |              36 |               3 |            5 |
+|        40 |      194.8 |          20 |       6 |       32 |        22 |              36 |               3 |            5 |
+|        40 |      194.8 |          20 |       6 |       32 |        22 |              36 |               3 |            5 |
 
 # Baseline Model
 
+Describe your model and state the features in your model, including how many are quantitative, ordinal, and nominal, and how you performed any necessary encodings. Report the performance of your model and whether or not you believe your current model is “good” and why.
+
+Tip: Make sure to hit all of the points above: many projects in the past have lost points for not doing so.
 
 
